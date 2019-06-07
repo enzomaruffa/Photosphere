@@ -3,16 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6DBB6BE5BF02FBB475763D /* Pods_Photosphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6158C91930F714573496C /* Pods_Photosphere.framework */; };
 		473ADA6C22AA91EC00C42957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA6B22AA91EC00C42957 /* AppDelegate.swift */; };
 		473ADA6E22AA91EC00C42957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA6D22AA91EC00C42957 /* SceneDelegate.swift */; };
 		473ADA7022AA91EC00C42957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA6F22AA91EC00C42957 /* ViewController.swift */; };
 		473ADA7322AA91EC00C42957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473ADA7122AA91EC00C42957 /* Main.storyboard */; };
 		473ADA7522AA91F000C42957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473ADA7422AA91F000C42957 /* Assets.xcassets */; };
 		473ADA7822AA91F000C42957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473ADA7622AA91F000C42957 /* LaunchScreen.storyboard */; };
+		473ADA8022AA92F100C42957 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */; };
+		473ADA8222AA931800C42957 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */; };
+		473ADA8422AA93E000C42957 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8322AA93E000C42957 /* Model.swift */; };
+		473ADA8622AA941000C42957 /* PhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8522AA941000C42957 /* PhotoCollection.swift */; };
+		47BC16CC22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */; };
+		47BC16CE22AAAEA100AE6AA6 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47BC16CD22AAAEA100AE6AA6 /* Scene.sks */; };
+		47BC16D022AAB18200AE6AA6 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC16CF22AAB18200AE6AA6 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,16 @@
 		473ADA7422AA91F000C42957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		473ADA7722AA91F000C42957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		473ADA7922AA91F000C42957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		473ADA8322AA93E000C42957 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		473ADA8522AA941000C42957 /* PhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollection.swift; sourceTree = "<group>"; };
+		47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		47BC16CD22AAAEA100AE6AA6 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		47BC16CF22AAB18200AE6AA6 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		50B6158C91930F714573496C /* Pods_Photosphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photosphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBBE13D03DE06F2AF397C78 /* Pods-Photosphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photosphere.release.xcconfig"; path = "Target Support Files/Pods-Photosphere/Pods-Photosphere.release.xcconfig"; sourceTree = "<group>"; };
+		B50780923F3361D90F4E7817 /* Pods-Photosphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photosphere.debug.xcconfig"; path = "Target Support Files/Pods-Photosphere/Pods-Photosphere.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6DBB6BE5BF02FBB475763D /* Pods_Photosphere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,8 @@
 			children = (
 				473ADA6A22AA91EC00C42957 /* Photosphere */,
 				473ADA6922AA91EC00C42957 /* Products */,
+				7114614F6084C2A023857B60 /* Pods */,
+				70786A09B9156BEB7F3707B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +84,32 @@
 				473ADA7422AA91F000C42957 /* Assets.xcassets */,
 				473ADA7622AA91F000C42957 /* LaunchScreen.storyboard */,
 				473ADA7922AA91F000C42957 /* Info.plist */,
+				473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */,
+				473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */,
+				473ADA8322AA93E000C42957 /* Model.swift */,
+				473ADA8522AA941000C42957 /* PhotoCollection.swift */,
+				47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */,
+				47BC16CD22AAAEA100AE6AA6 /* Scene.sks */,
+				47BC16CF22AAB18200AE6AA6 /* Scene.swift */,
 			);
 			path = Photosphere;
+			sourceTree = "<group>";
+		};
+		70786A09B9156BEB7F3707B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50B6158C91930F714573496C /* Pods_Photosphere.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7114614F6084C2A023857B60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B50780923F3361D90F4E7817 /* Pods-Photosphere.debug.xcconfig */,
+				6FBBE13D03DE06F2AF397C78 /* Pods-Photosphere.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473ADA7C22AA91F000C42957 /* Build configuration list for PBXNativeTarget "Photosphere" */;
 			buildPhases = (
+				DB54DB5F26390F495A951C36 /* [CP] Check Pods Manifest.lock */,
 				473ADA6422AA91EC00C42957 /* Sources */,
 				473ADA6522AA91EC00C42957 /* Frameworks */,
 				473ADA6622AA91EC00C42957 /* Resources */,
+				B5DF47228940D06E9597FE11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +174,69 @@
 			files = (
 				473ADA7822AA91F000C42957 /* LaunchScreen.storyboard in Resources */,
 				473ADA7522AA91F000C42957 /* Assets.xcassets in Resources */,
+				47BC16CE22AAAEA100AE6AA6 /* Scene.sks in Resources */,
 				473ADA7322AA91EC00C42957 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5DF47228940D06E9597FE11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Photosphere/Pods-Photosphere-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Photosphere/Pods-Photosphere-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Photosphere/Pods-Photosphere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB54DB5F26390F495A951C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Photosphere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		473ADA6422AA91EC00C42957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BC16CC22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift in Sources */,
 				473ADA7022AA91EC00C42957 /* ViewController.swift in Sources */,
+				473ADA8222AA931800C42957 /* PhotoCollectionViewCell.swift in Sources */,
+				473ADA8622AA941000C42957 /* PhotoCollection.swift in Sources */,
 				473ADA6C22AA91EC00C42957 /* AppDelegate.swift in Sources */,
+				473ADA8422AA93E000C42957 /* Model.swift in Sources */,
 				473ADA6E22AA91EC00C42957 /* SceneDelegate.swift in Sources */,
+				473ADA8022AA92F100C42957 /* PhotoCollectionViewController.swift in Sources */,
+				47BC16D022AAB18200AE6AA6 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,17 +378,21 @@
 		};
 		473ADA7D22AA91F000C42957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50780923F3361D90F4E7817 /* Pods-Photosphere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Photosphere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzomaruffa.crashcourse19.Photosphere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,17 +400,21 @@
 		};
 		473ADA7E22AA91F000C42957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FBBE13D03DE06F2AF397C78 /* Pods-Photosphere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Photosphere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzomaruffa.crashcourse19.Photosphere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

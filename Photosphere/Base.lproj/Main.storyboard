@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7UO-tk-3bQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Photo Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ARPhotoCollectionViewController" customModule="Photosphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-pC-FWD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arskView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4tX-pC-FWD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H9Z-Oq-Hyi"/>
+                            <constraint firstItem="4tX-pC-FWD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KRb-ek-Rxh"/>
+                            <constraint firstItem="4tX-pC-FWD" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="hCK-Wv-iHF"/>
+                            <constraint firstItem="4tX-pC-FWD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qMR-Ah-7jc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="4tX-pC-FWD" id="OyK-y0-yQB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3157" y="113"/>
+        </scene>
+        <!--My Photos-->
+        <scene sceneID="IY1-fK-SNd">
+            <objects>
+                <collectionViewController id="IrP-EZ-e2R" customClass="PhotoCollectionViewController" customModule="Photosphere" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="z8W-hu-mh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GU1-wh-IE6">
+                            <size key="itemSize" width="248" height="249"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="EWl-UM-HoQ" customClass="PhotoCollectionViewCell" customModule="Photosphere" customModuleProvider="target">
+                                <rect key="frame" x="83" y="0.0" width="248" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kiS-lp-xH8">
+                                    <rect key="frame" x="0.0" y="0.0" width="248" height="249"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPN-YN-zwu">
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="249"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="248" height="249"/>
+                                <connections>
+                                    <outlet property="photoImage" destination="YPN-YN-zwu" id="h7b-gS-lnv"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="IrP-EZ-e2R" id="i0X-SU-JBx"/>
+                            <outlet property="delegate" destination="IrP-EZ-e2R" id="I3S-5B-1g4"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My Photos" largeTitleDisplayMode="always" id="29F-nh-83B">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="fny-mM-wqi">
+                            <connections>
+                                <action selector="addCollectionPressed:" destination="IrP-EZ-e2R" id="8sF-zC-txt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToAr" id="c0E-O6-oKL"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsR-k2-vyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073.913043478261" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lM2-Ex-h6Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7UO-tk-3bQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="91a-Xu-juq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.51064884659999998" blue="0.0029529179449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IrP-EZ-e2R" kind="relationship" relationship="rootViewController" id="Nfw-6e-Jvi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUh-Af-Y94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163.768115942029" y="112.5"/>
         </scene>
     </scenes>
 </document>
