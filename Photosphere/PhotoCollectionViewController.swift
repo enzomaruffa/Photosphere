@@ -28,6 +28,13 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     @IBAction func addCollectionPressed(_ sender: Any) {
         let viewController = TLPhotosPickerViewController()
         viewController.delegate = self
+        
+        var configure = TLPhotosPickerConfigure()
+        configure.allowedVideo = false
+        configure.allowedVideoRecording = false
+        
+        viewController.configure = configure
+        
         self.present(viewController, animated: true, completion: nil)
     }
     
@@ -52,6 +59,7 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
         var image = UIImage()
         
         option.isSynchronous = true
+        
         manager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth/2, height: asset.pixelHeight/2), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
             image = result!
         })
