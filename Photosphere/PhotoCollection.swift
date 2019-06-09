@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PhotoCollection {
+class PhotoCollection: Codable {
     
-    var photos: [UIImage]
+    var photos: [Photo]
     
-    init(photos: [UIImage]) {
+    init(photos: [Photo]) {
         self.photos = photos
     }
+    
+    
 }

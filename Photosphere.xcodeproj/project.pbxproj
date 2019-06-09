@@ -16,11 +16,11 @@
 		473ADA7822AA91F000C42957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473ADA7622AA91F000C42957 /* LaunchScreen.storyboard */; };
 		473ADA8022AA92F100C42957 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */; };
 		473ADA8222AA931800C42957 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */; };
-		473ADA8422AA93E000C42957 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8322AA93E000C42957 /* Model.swift */; };
-		473ADA8622AA941000C42957 /* PhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8522AA941000C42957 /* PhotoCollection.swift */; };
+		473ADA8422AA93E000C42957 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ADA8322AA93E000C42957 /* AppData.swift */; };
 		47BC16CC22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */; };
-		47BC16CE22AAAEA100AE6AA6 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47BC16CD22AAAEA100AE6AA6 /* Scene.sks */; };
-		47BC16D022AAB18200AE6AA6 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC16CF22AAB18200AE6AA6 /* Scene.swift */; };
+		47BDD7D322ACA00600913957 /* KeyedEncodingContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BDD7D222ACA00600913957 /* KeyedEncodingContainerExtension.swift */; };
+		47BDD7D522ACA0C000913957 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BDD7D422ACA0C000913957 /* Photo.swift */; };
+		47BDD7D722ACA31D00913957 /* PhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BDD7D622ACA31C00913957 /* PhotoCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +34,11 @@
 		473ADA7922AA91F000C42957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		473ADA8322AA93E000C42957 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		473ADA8522AA941000C42957 /* PhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollection.swift; sourceTree = "<group>"; };
+		473ADA8322AA93E000C42957 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPhotoCollectionViewController.swift; sourceTree = "<group>"; };
-		47BC16CD22AAAEA100AE6AA6 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		47BC16CF22AAB18200AE6AA6 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		47BDD7D222ACA00600913957 /* KeyedEncodingContainerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedEncodingContainerExtension.swift; sourceTree = "<group>"; };
+		47BDD7D422ACA0C000913957 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		47BDD7D622ACA31C00913957 /* PhotoCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollection.swift; sourceTree = "<group>"; };
 		50B6158C91930F714573496C /* Pods_Photosphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photosphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBBE13D03DE06F2AF397C78 /* Pods-Photosphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photosphere.release.xcconfig"; path = "Target Support Files/Pods-Photosphere/Pods-Photosphere.release.xcconfig"; sourceTree = "<group>"; };
 		B50780923F3361D90F4E7817 /* Pods-Photosphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photosphere.debug.xcconfig"; path = "Target Support Files/Pods-Photosphere/Pods-Photosphere.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,11 +86,11 @@
 				473ADA7922AA91F000C42957 /* Info.plist */,
 				473ADA7F22AA92F100C42957 /* PhotoCollectionViewController.swift */,
 				473ADA8122AA931800C42957 /* PhotoCollectionViewCell.swift */,
-				473ADA8322AA93E000C42957 /* Model.swift */,
-				473ADA8522AA941000C42957 /* PhotoCollection.swift */,
+				473ADA8322AA93E000C42957 /* AppData.swift */,
 				47BC16CB22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift */,
-				47BC16CD22AAAEA100AE6AA6 /* Scene.sks */,
-				47BC16CF22AAB18200AE6AA6 /* Scene.swift */,
+				47BDD7D222ACA00600913957 /* KeyedEncodingContainerExtension.swift */,
+				47BDD7D622ACA31C00913957 /* PhotoCollection.swift */,
+				47BDD7D422ACA0C000913957 /* Photo.swift */,
 			);
 			path = Photosphere;
 			sourceTree = "<group>";
@@ -174,7 +174,6 @@
 			files = (
 				473ADA7822AA91F000C42957 /* LaunchScreen.storyboard in Resources */,
 				473ADA7522AA91F000C42957 /* Assets.xcassets in Resources */,
-				47BC16CE22AAAEA100AE6AA6 /* Scene.sks in Resources */,
 				473ADA7322AA91EC00C42957 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,12 +230,13 @@
 				47BC16CC22AAAAD200AE6AA6 /* ARPhotoCollectionViewController.swift in Sources */,
 				473ADA7022AA91EC00C42957 /* ViewController.swift in Sources */,
 				473ADA8222AA931800C42957 /* PhotoCollectionViewCell.swift in Sources */,
-				473ADA8622AA941000C42957 /* PhotoCollection.swift in Sources */,
+				47BDD7D522ACA0C000913957 /* Photo.swift in Sources */,
+				47BDD7D322ACA00600913957 /* KeyedEncodingContainerExtension.swift in Sources */,
 				473ADA6C22AA91EC00C42957 /* AppDelegate.swift in Sources */,
-				473ADA8422AA93E000C42957 /* Model.swift in Sources */,
+				47BDD7D722ACA31D00913957 /* PhotoCollection.swift in Sources */,
+				473ADA8422AA93E000C42957 /* AppData.swift in Sources */,
 				473ADA6E22AA91EC00C42957 /* SceneDelegate.swift in Sources */,
 				473ADA8022AA92F100C42957 /* PhotoCollectionViewController.swift in Sources */,
-				47BC16D022AAB18200AE6AA6 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

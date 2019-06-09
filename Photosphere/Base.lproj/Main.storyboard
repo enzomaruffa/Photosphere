@@ -16,21 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-pC-FWD">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gY-A2-7Zg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </arskView>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4tX-pC-FWD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H9Z-Oq-Hyi"/>
-                            <constraint firstItem="4tX-pC-FWD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KRb-ek-Rxh"/>
-                            <constraint firstItem="4tX-pC-FWD" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="hCK-Wv-iHF"/>
-                            <constraint firstItem="4tX-pC-FWD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qMR-Ah-7jc"/>
+                            <constraint firstItem="9gY-A2-7Zg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ae-OF-HMr"/>
+                            <constraint firstItem="9gY-A2-7Zg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="eBd-BU-FHF"/>
+                            <constraint firstItem="9gY-A2-7Zg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fGb-bB-F4U"/>
+                            <constraint firstItem="9gY-A2-7Zg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tjv-dW-OUj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="4tX-pC-FWD" id="OyK-y0-yQB"/>
+                        <outlet property="sceneView" destination="9gY-A2-7Zg" id="eRV-Kf-6c3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,10 +63,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="249"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8f-vb-7n1">
+                                            <rect key="frame" x="194.5" y="10" width="43.5" height="43.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeS-Vf-KdG">
+                                                    <rect key="frame" x="7.5" y="7.5" width="28.5" height="29"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="zeS-Vf-KdG" firstAttribute="centerX" secondItem="l8f-vb-7n1" secondAttribute="centerX" id="4A6-uE-Cim"/>
+                                                <constraint firstAttribute="height" secondItem="zeS-Vf-KdG" secondAttribute="height" multiplier="1.5" id="eD1-wX-6LL"/>
+                                                <constraint firstItem="zeS-Vf-KdG" firstAttribute="centerY" secondItem="l8f-vb-7n1" secondAttribute="centerY" id="h5r-hk-bLy"/>
+                                                <constraint firstAttribute="width" secondItem="l8f-vb-7n1" secondAttribute="height" multiplier="1:1" id="vAd-sb-uRK"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="l8f-vb-7n1" secondAttribute="trailing" constant="10" id="B3m-7g-7gL"/>
+                                        <constraint firstItem="l8f-vb-7n1" firstAttribute="top" secondItem="kiS-lp-xH8" secondAttribute="top" constant="10" id="gXg-TU-FWV"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="248" height="249"/>
                                 <connections>
+                                    <outlet property="photoCount" destination="zeS-Vf-KdG" id="YMI-ke-buy"/>
+                                    <outlet property="photoCountContainer" destination="l8f-vb-7n1" id="XYl-vh-ITG"/>
                                     <outlet property="photoImage" destination="YPN-YN-zwu" id="h7b-gS-lnv"/>
                                 </connections>
                             </collectionViewCell>

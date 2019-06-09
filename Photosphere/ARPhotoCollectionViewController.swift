@@ -10,14 +10,14 @@ import UIKit
 import ARKit
 
 
-class ARPhotoCollectionViewController: UIViewController, ARSKViewDelegate {
+class ARPhotoCollectionViewController: UIViewController, ARSCNViewDelegate {
     
     var photoCollection: PhotoCollection!
     
-    @IBOutlet weak var sceneView: ARSKView!
+    @IBOutlet weak var sceneView: ARSCNView!
     
-    var photoTextures: [SKTexture]!
-    var photoNodes: [SKSpriteNode] = []
+    var photoNodes: [SCNNode] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,41 @@ class ARPhotoCollectionViewController: UIViewController, ARSKViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and node count
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
+        // Show statistics such as fps and timing information
+        sceneView.showsStatistics = true
         
-        // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") as? GameScene {
-            photoTextures = photoCollection.photos.map( { SKTexture(image: $0) } )
-            sceneView.presentScene(scene)
+        // Create a new scene
+        let scene = SCNScene()
+        
+        // Set the scene to the view
+        sceneView.scene = scene
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        for (index, photo) in photoCollection.photos.enumerated() {
+            let node = SCNNode.init(geometry: SCNBox(width: 0.2125, height: 0.45, length: 0.01, chamferRadius: 0.2))
+            
+            node.position = calculateNodePositionCircle(currentIndex: index, max: photoCollection.photos.count)
+            node.geometry?.firstMaterial?.diffuse.contents = photo.photo
+            
+            print(node.position)
+            
+            node.look(at: SCNVector3(0, 0, 0))
+            
+            photoNodes.append(node)
+            sceneView.scene.rootNode.addChildNode(node)
         }
-
-        // Do any additional setup after loading the view.
+    }
+    
+    func calculateNodePositionCircle(currentIndex: Int, max: Int) -> SCNVector3 {
+        let radius = 0.7 + (max > 8 ? Double(max) * 0.05 : 0)
+        
+        let angle = (Double(360) / Double(max) * Double(currentIndex)).degreesToRadians
+        
+        let x = radius * sin(angle);
+        let z = radius * cos(angle);
+        
+        return SCNVector3(x: Float(x), y: 0, z: Float(z))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,28 +68,10 @@ class ARPhotoCollectionViewController: UIViewController, ARSKViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         
-        
         // Run the view's session
         sceneView.session.run(configuration)
     }
     
-    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        // Create and configure a node for the anchor added to the view's session.
-        for texture in photoTextures {
-            let node = SKSpriteNode(texture: texture)
-            node.size = CGSize(width: 100, height: 100)
-            photoNodes.append(node)
-        }
-        
-        for (i, node) in photoNodes.enumerated() {
-            if node != photoNodes.first {
-                photoNodes.first?.addChild(node)
-                node.position = CGPoint(x: 110 * i, y: 0)
-            }
-        }
-        
-        return photoNodes.first
-    }
 
     /*
     // MARK: - Navigation
@@ -77,4 +83,9 @@ class ARPhotoCollectionViewController: UIViewController, ARSKViewDelegate {
     }
     */
 
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
 }

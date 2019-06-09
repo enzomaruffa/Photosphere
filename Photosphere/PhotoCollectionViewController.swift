@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import TLPhotoPicker
 
 private let reuseIdentifier = "photoCell"
@@ -34,7 +35,11 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     
     func dismissPhotoPicker(withTLPHAssets: [TLPHAsset]) {
         // use selected order, fullresolution image
-        let photoCollection = PhotoCollection(photos: withTLPHAssets.map({ $0.fullResolutionImage! }))
+        if withTLPHAssets.isEmpty {
+            return
+        }
+        
+        let photoCollection = PhotoCollection(photos: withTLPHAssets.map({ Photo(photo: $0.fullResolutionImage!, name: $0.originalFileName ?? "") }))
         AppData.instance.photoCollections.append(photoCollection)
         
         self.collectionView.reloadData()
@@ -77,15 +82,15 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -175,7 +180,7 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToAr" {
             let vc = segue.destination as! ARPhotoCollectionViewController
-            vc.photoCollection = sender as! PhotoCollection
+            vc.photoCollection = (sender as! PhotoCollection)
         }
     }
     
