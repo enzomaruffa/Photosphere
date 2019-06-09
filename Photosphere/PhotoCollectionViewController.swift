@@ -28,10 +28,10 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     @IBAction func addCollectionPressed(_ sender: Any) {
         let viewController = TLPhotosPickerViewController()
         viewController.delegate = self
-        var configure = TLPhotosPickerConfigure()
-        //configure.nibSet = (nibName: "CustomCell_Instagram", bundle: Bundle.main) // If you want use your custom cell..
         self.present(viewController, animated: true, completion: nil)
     }
+    
+    
     
     func dismissPhotoPicker(withTLPHAssets: [TLPHAsset]) {
         // use selected order, fullresolution image
@@ -39,12 +39,26 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
             return
         }
         
-        let photoCollection = PhotoCollection(photos: withTLPHAssets.map({ Photo(photo: $0.fullResolutionImage!, name: $0.originalFileName ?? "") }))
+        let photoCollection = PhotoCollection(photos: withTLPHAssets.map({ Photo(photo: getAssetThumbnail(asset: $0.phAsset!), name: $0.originalFileName ?? "") }))
         AppData.instance.photoCollections.append(photoCollection)
         
         self.collectionView.reloadData()
     }
-
+    
+    func getAssetThumbnail(asset: PHAsset) -> UIImage {
+        
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var image = UIImage()
+        
+        option.isSynchronous = true
+        manager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth/2, height: asset.pixelHeight/2), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+            image = result!
+        })
+        
+        return image
+        
+    }
     
     /*
     // MARK: - Navigation

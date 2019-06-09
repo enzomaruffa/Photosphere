@@ -15,6 +15,8 @@ class AppData {
         didSet {
             let defaults = UserDefaults.standard
             
+            print(photoCollections)
+            
             // Use PropertyListEncoder to convert Player into Data / NSData
             defaults.set(try? PropertyListEncoder().encode(photoCollections), forKey: "photoCollections")
         }
