@@ -104,20 +104,20 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let items : CGFloat = 2
-        let spacing : CGFloat = 20 + 20 + (items-1) * 20
+        let spacing : CGFloat = 5 + 5 + (items-1) * 5
         let width = (collectionView.frame.width - spacing) / items
         let height = collectionView.frame.height * 0.3
         //let width  = collectionView.frame.width * 0.45

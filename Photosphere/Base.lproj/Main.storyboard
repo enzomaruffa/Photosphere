@@ -80,10 +80,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8f-vb-7n1">
-                                            <rect key="frame" x="210" y="10" width="28" height="28"/>
+                                            <rect key="frame" x="208" y="10" width="30" height="30"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeS-Vf-KdG">
-                                                    <rect key="frame" x="3.5" y="3" width="21.5" height="21.5"/>
+                                                    <rect key="frame" x="4" y="4.5" width="21.5" height="21.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -92,7 +92,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zeS-Vf-KdG" firstAttribute="centerX" secondItem="l8f-vb-7n1" secondAttribute="centerX" id="4A6-uE-Cim"/>
-                                                <constraint firstAttribute="height" secondItem="zeS-Vf-KdG" secondAttribute="height" multiplier="1.3" id="eD1-wX-6LL"/>
+                                                <constraint firstAttribute="height" secondItem="zeS-Vf-KdG" secondAttribute="height" multiplier="1.4" id="eD1-wX-6LL"/>
                                                 <constraint firstItem="zeS-Vf-KdG" firstAttribute="centerY" secondItem="l8f-vb-7n1" secondAttribute="centerY" id="h5r-hk-bLy"/>
                                                 <constraint firstAttribute="width" secondItem="l8f-vb-7n1" secondAttribute="height" multiplier="1:1" id="vAd-sb-uRK"/>
                                             </constraints>
